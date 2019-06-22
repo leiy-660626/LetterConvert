@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class LetterConvertTest {
     @Test
@@ -10,7 +11,7 @@ public class LetterConvertTest {
         int [] inputData = {0, 2, 3};
 
         LetterConvert lc = new LetterConvert();
-        ArrayList<String> resultList = lc.convertLetter(inputData);
+        List<String> resultList = lc.convertLetter(inputData);
         Collections.sort(resultList);
 
         ArrayList<String> assertResult = new ArrayList<String>();
@@ -26,7 +27,7 @@ public class LetterConvertTest {
         int [] inputData = {9};
 
         LetterConvert lc = new LetterConvert();
-        ArrayList<String> resultList = lc.convertLetter(inputData);
+        List<String> resultList = lc.convertLetter(inputData);
         Collections.sort(resultList);
 
         ArrayList<String> assertResult = new ArrayList<String>();
@@ -42,7 +43,7 @@ public class LetterConvertTest {
         int [] inputData = {-1, 100};
 
         LetterConvert lc = new LetterConvert();
-        ArrayList<String> resultList = lc.convertLetter(inputData);
+        List<String> resultList = lc.convertLetter(inputData);
 
         assertEquals(0, resultList.size());
     }
@@ -52,7 +53,7 @@ public class LetterConvertTest {
         int [] inputData = { 22, 3};
 
         LetterConvert lc = new LetterConvert();
-        ArrayList<String> resultList = lc.convertLetter(inputData);
+        List<String> resultList = lc.convertLetter(inputData);
         Collections.sort(resultList);
 
         ArrayList<String> assertResult = new ArrayList<String>();

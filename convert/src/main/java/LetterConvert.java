@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -15,7 +12,7 @@ public class LetterConvert {
 
     public static void main(String[] args){
         int[] d = {3, 22};
-        ArrayList<String> resultList = new LetterConvert().convertLetter(d);
+        List<String> resultList = new LetterConvert().convertLetter(d);
         System.out.println(resultList);
 
     }
@@ -25,7 +22,7 @@ public class LetterConvert {
      * @param inputData
      * @return rstList
      */
-    public  ArrayList<String> convertLetter(int[] inputData) {
+    public  List<String> convertLetter(int[] inputData) {
 
         char[][] charSet = new char[][]{
                 {},{},
@@ -34,7 +31,7 @@ public class LetterConvert {
                 {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}
         };
 
-        ArrayList<String> rstList = new ArrayList<String>();
+        List<String> rstList = new LinkedList<>();
         if(null == inputData){
             return rstList;
         }
@@ -57,9 +54,9 @@ public class LetterConvert {
      * @param index each of the input array data
      * @param charSet original charset
      */
-    private  void mixData(ArrayList<String> rstList, int index, char[][] charSet){
-        ArrayList<String> l=new ArrayList<String>();
-        ArrayList<String> tt=new ArrayList<String>(rstList);
+    private  void mixData(List<String> rstList, int index, char[][] charSet){
+        List<String> l=new LinkedList<>();
+        List<String> tt=new LinkedList<>(rstList);
         rstList.clear();
 
         if(index < 10) {
@@ -96,7 +93,7 @@ public class LetterConvert {
      * @param listData original
      * @return result data which is not repeat
      */
-    private ArrayList<String> removeDuplication(ArrayList<String> listData){
+    private List<String> removeDuplication(List<String> listData){
 
         Set<String> middleHashSet = new HashSet<String>(listData);
         listData.clear();
